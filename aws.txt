@@ -1,0 +1,9 @@
+Hello, I am Akash V., a passionate and ambitious B.Tech graduate in Information Technology from Easwari Engineering College, where I secured a CGPA of 8.45. I am currently pursuing the AWS Cloud Practitioner Certification and have earned a Python certification from Udemy. My academic journey and certifications reflect my commitment to continuously upgrading my technical skills.
+
+I have experience in developing innovative solutions, including projects like a Random Maths Quiz using Python, a Student Management CRUD System utilizing Python and MySQL, and a Crop Recommendation System powered by machine learning with XGBoost. My portfolio also includes creating a Language Translation Bot using AWS services like Lambda, Lex, and Translate, showcasing my ability to integrate cloud technologies into practical applications.
+
+In addition to my technical expertise, I actively contributed to extracurricular activities as a department volleyball player and an NSS volunteer, where I honed my teamwork and leadership abilities. I also took the initiative to coordinate and organize cultural events, highlighting my organizational skills.
+
+My professional skill set includes proficiency in Python, AWS, HTML, and MySQL, and familiarity with tools like Visual Studio Code and PyCharm. I thrive on problem-solving and am always eager to tackle new challenges, aiming to contribute meaningfully to organizational goals while advancing my expertise.
+
+Outside of academics and work, I published a research article in IJISAE, reflecting my passion for learning and sharing knowledge. I’m looking forward to leveraging my skills and experiences to make a significant impact in my future endeavors.
