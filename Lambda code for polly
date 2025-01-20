@@ -1,0 +1,45 @@
+import json
+import boto3
+import uuid
+import io
+from botocore.exceptions import ClientError
+
+def lambda_handler(event, context):
+    polly = boto3.client('polly')
+    s3 = boto3.client('s3')
+
+    bucket_name = 'aws-pj-1'
+    file_name = 'aws.txt'
+    
+    try:
+        # Get text from the S3 file
+        response = s3.get_object(Bucket=bucket_name, Key=file_name)
+        text = response['Body'].read().decode('utf-8')
+        
+        # Use Polly to convert text to speech
+        speech_response = polly.synthesize_speech(
+            Text=text,
+            OutputFormat='mp3',
+            VoiceId='Joanna'
+        )
+        
+        # Read the AudioStream into a byte array
+        audio_data = speech_response['AudioStream'].read()
+
+        # Generate a unique filename for the speech file
+        audio_file_name = f"{uuid.uuid4()}.mp3"
+        
+        # Upload the audio to S3
+        s3.put_object(Bucket=bucket_name, Key=audio_file_name, Body=audio_data)
+        
+        return {
+            'statusCode': 200,
+            'body': json.dumps(f"File converted to speech successfully! Audio file saved as {audio_file_name}")
+        }
+    
+    except ClientError as e:
+        print(f"Error: {e}")
+        return {
+            'statusCode': 500,
+            'body': json.dumps(f"Error: {str(e)}")
+        }
